@@ -17,3 +17,13 @@ variable "s3_bucket" {
   type    = string
   default = "ai-poc-gpt-data-REPLACE_WITH_UNIQUE"
 }
+
+variable "project_name" {
+  type    = string
+  default = "mini-gpt"
+}
+
+variable "aws_key_name" {
+  type    = string
+  description = "Your AWS keypair name for EC2 SSH access"
+}

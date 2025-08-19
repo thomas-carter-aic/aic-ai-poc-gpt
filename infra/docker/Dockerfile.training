@@ -1,28 +1,20 @@
-# Lightweight image for minimal fine-tune/inference (cpu + optional GPU)
-FROM ubuntu:22.04
+# Free-Tier mini-GPT training container
+FROM python:3.11-slim
 
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3 python3-venv python3-pip git curl build-essential && \
-    rm -rf /var/lib/apt/lists/*
+# Install system dependencies
+RUN apt-get update && apt-get install -y git wget && rm -rf /var/lib/apt/lists/*
 
-# Create app user
-RUN useradd -m -s /bin/bash aiuser
-USER aiuser
-WORKDIR /home/aiuser/app
+# Set working directory
+WORKDIR /app
 
-# Python venv
-RUN python3 -m venv .venv
-ENV PATH="/home/aiuser/app/.venv/bin:${PATH}"
-RUN pip install --upgrade pip
+# Copy source
+COPY ./gptx ./gptx
+COPY ./data ./data
+COPY ./scripts ./scripts
+COPY requirements.txt .
 
-# Install CPU-only ML stack (works in Free Tier)
-RUN pip install transformers==4.40.0 datasets sentencepiece accelerate peft==0.6.0
+# Install Python deps
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Optional: for GPU images, use a different base with CUDA and install torch/cuda wheels accordingly.
-
-COPY . /home/aiuser/app
-
-EXPOSE 8080
-
-CMD [ "bash" ]
+# Default entrypoint
+ENTRYPOINT ["python", "scripts/train.py"]
