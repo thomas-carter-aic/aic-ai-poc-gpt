@@ -1,0 +1,8 @@
+# Direct preference optimization placeholder
+training:
+  algorithm: "DPO"
+  reward_model_path: "models/reward"
+  learning_rate: 2e-5
+  batch_size: 2
+  epochs: 1
+  max_seq_length: 512

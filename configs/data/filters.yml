@@ -1,0 +1,10 @@
+# Safety / red-team filters
+# These are minimal text heuristics for toy PoC
+prohibited_words:
+  - "kill"
+  - "terrorist"
+  - "bomb"
+  - "exploit"
+actions:
+  block_generation: true
+  log_attempt: true

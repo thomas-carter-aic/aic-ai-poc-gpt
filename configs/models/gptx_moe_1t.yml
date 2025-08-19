@@ -1,0 +1,11 @@
+# Mixture-of-experts 1T param placeholder
+model:
+  name: "gptx-moe-1t"
+  experts: 128
+  d_model: 12288
+  n_layers: 128
+  n_heads: 128
+  context_length: 65536
+  rotary_embeddings: "rope_scaled"
+  moe_routing: "top_k=2"
+  checkpoint_path: "models/gptx_moe_1t/"

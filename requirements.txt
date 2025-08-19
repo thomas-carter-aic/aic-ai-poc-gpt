@@ -1,0 +1,8 @@
+transformers==4.40.0
+datasets
+sentencepiece
+peft==0.6.0
+accelerate
+fastapi
+uvicorn
+PyYAML

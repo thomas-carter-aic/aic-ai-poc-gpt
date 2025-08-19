@@ -1,0 +1,10 @@
+# FastAPI server config
+server:
+  framework: "fastapi"
+  host: "0.0.0.0"
+  port: 8080
+  model_path: "outputs/model"
+  max_new_tokens: 128
+  temperature: 0.7
+  top_p: 0.9
+  device: "cpu"  # "cuda" if GPU available

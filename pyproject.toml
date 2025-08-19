@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "aic-ai-poc-gpt"
+version = "0.1.0"
+description = "PoC repository for scaled-down GPT training, inference, eval, and safety."
+authors = ["Thomas Carter <thomas.carter@appliedinnovationcorp.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+transformers = "^4.40.0"
+datasets = "^2.14.0"
+sentencepiece = "^0.1.99"
+peft = "^0.6.0"
+accelerate = "^0.22.0"
+fastapi = "^0.100.0"
+uvicorn = "^0.23.2"
+PyYAML = "^6.0"
+
+[build-system]
+requires = ["poetry-core>=1.5.1"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,4 @@
+# Sequence packing / batching config
+max_seq_length: 512
+pad_token: "<pad>"
+packing_strategy: "eos_concat"  # concatenate multiple short sequences

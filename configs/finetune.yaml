@@ -1,0 +1,13 @@
+# Fine-tune wrapper (used by finetune script)
+dataset:
+  path: "data/sample_train.jsonl"
+  field: "text"
+
+training:
+  config: "configs/train_small.yaml"
+  seed: 42
+  local_rank: -1
+
+infra:
+  use_spot_gpu: false
+  gpu_instance_type: "g4dn.xlarge"  # cheap T4 instance for quick runs when needed

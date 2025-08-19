@@ -1,0 +1,7 @@
+# TensorRT LLM inference config
+server:
+  framework: "trtllm"
+  max_batch_size: 4
+  max_seq_length: 2048
+  precision: "fp16"
+  device: 0

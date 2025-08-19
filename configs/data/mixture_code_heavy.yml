@@ -1,0 +1,9 @@
+# Dataset mixture for code-heavy fine-tuning
+datasets:
+  - name: "codeparrot-small"
+    weight: 0.7
+  - name: "stackexchange-code"
+    weight: 0.3
+preprocessing:
+  truncate: 512
+  tokenize_special: true

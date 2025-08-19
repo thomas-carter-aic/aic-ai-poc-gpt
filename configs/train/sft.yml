@@ -1,0 +1,10 @@
+# Supervised fine-tuning config
+training:
+  model: "gptx-7b"
+  dataset: "mixture_default"
+  batch_size: 1
+  epochs: 1
+  lr_scheduler: "linear"
+  max_seq_length: 512
+  gradient_accumulation: 4
+  logging_steps: 10

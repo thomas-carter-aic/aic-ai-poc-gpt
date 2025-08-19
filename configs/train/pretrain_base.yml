@@ -1,0 +1,8 @@
+training:
+  model: "gptx-7b"
+  dataset: "mixture_default"
+  epochs: 1
+  batch_size: 2
+  learning_rate: 2e-4
+  max_seq_length: 512
+  optimizer: "adamw"

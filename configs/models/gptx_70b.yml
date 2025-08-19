@@ -1,0 +1,8 @@
+model:
+  name: "gptx-70b"
+  d_model: 8192
+  n_layers: 60
+  n_heads: 64
+  context_length: 16384
+  rotary_embeddings: "rope_scaled"
+  checkpoint_path: "models/gptx_70b/"

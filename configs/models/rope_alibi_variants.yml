@@ -1,0 +1,12 @@
+# Rotary embeddings and ALiBi variants
+rope:
+  base: 10000
+  scaling: "linear"
+alibi:
+  enabled: true
+  type: "linear_bias"
+  slope: "auto"
+variants:
+  - "rope"
+  - "rope_scaled"
+  - "alibi"

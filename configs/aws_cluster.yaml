@@ -1,0 +1,5 @@
+# Lightweight parameters for the Terraform module below
+region: "us-east-1"
+management_instance_type: "t2.micro"   # free-tier eligible (t2.micro or t3.micro)
+ssh_key_name: "ai-poc-key"             # create this keypair in AWS console or via aws CLI
+s3_bucket: "ai-poc-gpt-data-<your-unique-suffix>"  # replace <your-unique-suffix>

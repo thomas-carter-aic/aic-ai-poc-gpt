@@ -1,0 +1,9 @@
+# Inference server config (FastAPI)
+server:
+  host: "0.0.0.0"
+  port: 8080
+  model_path: "./outputs/distilgpt2_lora"  # or ./quantized/*
+  max_new_tokens: 128
+  temperature: 0.7
+  top_p: 0.9
+  device: "cpu"  # change to "cuda" if running on GPU

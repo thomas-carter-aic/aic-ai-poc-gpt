@@ -1,0 +1,8 @@
+model:
+  name: "gptx-13b"
+  d_model: 5120
+  n_layers: 40
+  n_heads: 40
+  context_length: 8192
+  rotary_embeddings: "rope"
+  checkpoint_path: "models/gptx_13b/"

@@ -1,0 +1,8 @@
+# vLLM server config
+server:
+  framework: "vllm"
+  device: "cuda"
+  num_gpus: 1
+  max_batch_size: 8
+  max_seq_length: 4096
+  prefetch_factor: 2

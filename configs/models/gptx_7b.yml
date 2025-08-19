@@ -1,0 +1,10 @@
+# Mini GPT-7B configuration placeholder
+model:
+  name: "gptx-7b"
+  d_model: 4096
+  n_layers: 32
+  n_heads: 32
+  context_length: 8192
+  vocab_size: 50257
+  rotary_embeddings: "rope"
+  checkpoint_path: "models/gptx_7b/"

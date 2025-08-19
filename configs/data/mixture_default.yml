@@ -1,0 +1,9 @@
+# Default text mixture for small fine-tune experiments
+datasets:
+  - name: "wikitext-2"
+    weight: 0.5
+  - name: "openwebtext-mini"
+    weight: 0.5
+preprocessing:
+  truncate: 256
+  lowercase: true
